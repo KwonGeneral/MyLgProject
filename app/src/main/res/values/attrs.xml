@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyNavigationView">
+        <attr name="nv_image_width" format="integer" />
+        <attr name="nv_image_height" format="integer" />
+        <attr name="nv_image_src" format="reference" />
+        <attr name="nv_text" format="string" />
+        <attr name="nv_text_style" format="reference" />
+        <attr name="nv_action" format="string" />
+
+        <attr name="nv_disable_color" format="color"/>
+        <attr name="nv_able_color" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="MyNavigationContainer">
+    </declare-styleable>
+</resources>

@@ -31,6 +31,9 @@ class PagedRepository(
     }
 }
 
+
+// 아래의 방식보다는 위의 방식으로 하는 것이 더 안정적이다.
+// 검색 쿼리 또한, 리스트에 아이템을 넣을 때, 위의 방식이 더 안정적이다.
 class TodoPagingSource(
     private val dao: ScheduleService
 ): PagingSource<Int, ScheduleRecord>() {

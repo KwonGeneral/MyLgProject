@@ -1,4 +1,4 @@
-package com.kwon.it_word.adapter
+package com.kwon.mylgproject.adapter
 
 import android.util.Log
 import android.view.LayoutInflater
