@@ -22,6 +22,8 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="#ffffff"
+        app:nv_text_styles="@style/bottom_nav_text"
+        app:nv_item_selector="@drawable/checkable_bottom_nav"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -30,66 +32,41 @@
         <com.kwon.mylgproject.widget.MyNavigationView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:nv_image_width="24"
-            app:nv_image_height="24"
             app:nv_image_src="@drawable/bottom_life_record"
             app:nv_text="@string/life_record"
-            app:nv_text_style="@style/bottom_nav_text"
             app:nv_action="@string/action_life_record"
-            app:nv_able_color="@color/pink"
-            app:nv_disable_color="@color/cool_grey"
             />
 
         <com.kwon.mylgproject.widget.MyNavigationView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:nv_image_width="24"
-            app:nv_image_height="24"
             app:nv_image_src="@drawable/bottom_record"
             app:nv_text="@string/record"
-            app:nv_text_style="@style/bottom_nav_text"
             app:nv_action="@string/action_record"
-            app:nv_able_color="@color/pink"
-            app:nv_disable_color="@color/cool_grey"
             />
 
         <com.kwon.mylgproject.widget.MyNavigationView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:nv_image_width="24"
-            app:nv_image_height="24"
             app:nv_image_src="@drawable/bottom_home"
             app:nv_text="@string/home"
-            app:nv_text_style="@style/bottom_nav_text"
             app:nv_action="@string/action_home"
-            app:nv_able_color="@color/pink"
-            app:nv_disable_color="@color/cool_grey"
             />
 
         <com.kwon.mylgproject.widget.MyNavigationView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:nv_image_width="24"
-            app:nv_image_height="24"
             app:nv_image_src="@drawable/bottom_calendar"
             app:nv_text="@string/calendar"
-            app:nv_text_style="@style/bottom_nav_text"
             app:nv_action="@string/action_calendar"
-            app:nv_able_color="@color/pink"
-            app:nv_disable_color="@color/cool_grey"
             />
 
         <com.kwon.mylgproject.widget.MyNavigationView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:nv_image_width="24"
-            app:nv_image_height="24"
             app:nv_image_src="@drawable/bottom_exam"
             app:nv_text="@string/exam"
-            app:nv_text_style="@style/bottom_nav_text"
             app:nv_action="@string/action_exam"
-            app:nv_able_color="@color/pink"
-            app:nv_disable_color="@color/cool_grey"
             />
 
 

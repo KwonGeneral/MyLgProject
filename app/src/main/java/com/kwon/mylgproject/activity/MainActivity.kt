@@ -18,17 +18,9 @@ class MainActivity : AppCompatActivity() {
             changeFragment(fragment_name)
         })
 
-        main_nav.onclick = {
-            Log.d("TEST", "액션 : $it")
+        main_nav.onItemClick = { action ->
+            Log.d("TEST", "action : $action")
         }
-
-//        main_nav.onClickItemListener= { action ->
-//            Log.d("TEST",action.toString())
-//        }
-
-//        main_nav.clickTest() {
-//            Log.d("TEST", "클릭")
-//        }
     }
 
     private fun changeFragment(fragment_type:String) {
