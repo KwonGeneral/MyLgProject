@@ -9,4 +9,17 @@
     <color name="white">#FFFFFFFF</color>
     <color name="pink">#FFC0CB</color>
     <color name="cool_grey">#53565A</color>
+    <color name="blurry_black">#22000000</color>
+    <color name="blurry_white">#aaffffff</color>
+    <color name="cool_black">#404040</color>
+
+    <color name="normal_black">#333333</color>
+    <color name="focused_black">#FFC0CB</color>
+    <color name="pressed_black">#999999</color>
+    <color name="disabled_black">#22000000</color>
+
+    <color name="normal_white">#eeeeee</color>
+    <color name="focused_white">#eeeeee</color>
+    <color name="pressed_white">#aaaaaa</color>
+    <color name="disabled_white">#22ffffff</color>
 </resources>

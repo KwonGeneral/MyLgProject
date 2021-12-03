@@ -13,4 +13,6 @@
     <string name="action_record">RECORD</string>
     <string name="action_calendar">CALENDAR</string>
     <string name="action_exam">EXAM</string>
+
+    <string name="btn">버튼</string>
 </resources>

@@ -18,7 +18,9 @@ class MainActivity : AppCompatActivity() {
             changeFragment(fragment_name)
         })
 
+
         main_nav.onItemClick = { action ->
+            changeFragment(action)
             Log.d("TEST", "action : $action")
         }
     }

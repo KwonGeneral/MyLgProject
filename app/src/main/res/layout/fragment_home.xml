@@ -1,14 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     tools:context=".widget.HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <widget.CustomButton
+        android:id="@+id/containedBtn"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        app:btn_selector="@drawable/selector_contained_button"
+        app:btn_focus="true"
+        app:btn_text="@string/btn"
+        app:btn_text_style="@style/button_text"
+        app:btn_icon="@drawable/bottom_exam"
+        app:btn_item_selector="@color/selector_contained_button_text"
 
-</FrameLayout>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/outlinedBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <widget.CustomButton
+        android:id="@+id/outlinedBtn"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        app:btn_selector="@drawable/selector_outlined_button"
+        app:btn_focus="true"
+        app:btn_text="@string/btn"
+        app:btn_text_style="@style/button_text"
+        app:btn_icon="@drawable/bottom_calendar"
+        app:btn_icon_position="End"
+        app:btn_item_selector="@color/selector_contained_button_text"
+
+        app:layout_constraintTop_toBottomOf="@id/containedBtn"
+        app:layout_constraintBottom_toTopOf="@id/textBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <widget.CustomButton
+        android:id="@+id/textBtn"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        app:btn_selector="@drawable/selector_text_button"
+        app:btn_focus="true"
+        app:btn_text="@string/btn"
+        app:btn_text_style="@style/button_text"
+        app:btn_icon="@drawable/bottom_home"
+        app:btn_item_selector="@color/selector_contained_button_text"
+
+        app:layout_constraintTop_toBottomOf="@id/outlinedBtn"
+        app:layout_constraintBottom_toTopOf="@id/iconBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <widget.CustomButton
+        android:id="@+id/iconBtn"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        app:btn_selector="@drawable/selector_text_button"
+        app:btn_focus="true"
+        app:btn_icon="@drawable/bottom_exam"
+        app:btn_item_selector="@color/selector_text_button_text"
+
+        app:layout_constraintTop_toBottomOf="@id/outlinedBtn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

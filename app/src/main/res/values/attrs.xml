@@ -10,4 +10,17 @@
         <attr name="nv_text_styles" format="reference"/>
         <attr name="nv_item_selector" format="reference"/>
     </declare-styleable>
+
+    <declare-styleable name="LgButton">
+        <attr name="btn_selector" format="reference"/>
+        <attr name="btn_item_selector" format="reference"/>
+        <attr name="btn_focus" format="boolean" />
+        <attr name="btn_text" format="string" />
+        <attr name="btn_text_style" format="reference"/>
+        <attr name="btn_text_color" format="color" />
+        <attr name="btn_icon" format="reference"/>
+        <attr name="btn_icon_position" format="string"/>
+    </declare-styleable>
+
+
 </resources>

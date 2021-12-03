@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.kwon.mylgproject.R
+import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,5 +21,9 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         Log.d("TEST", "- 홈 프레그먼트 -")
+
+        iconBtn.setOnClickListener {
+            Log.d("TEST", "홈 프레그먼트 이벤트")
+        }
     }
 }

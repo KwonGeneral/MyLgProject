@@ -1,6 +1,7 @@
 package com.kwon.mylgproject.widget
 
 import android.content.Context
+import android.content.res.Resources
 import android.util.AttributeSet
 import android.view.Gravity
 import android.view.View
@@ -22,6 +23,8 @@ class MyNavigationContainer(context: Context?, attrs: AttributeSet?) : LinearLay
     private var nvTextStyles: Int = 0
     private var nvItemSelector: Int = 0
     private var viewList = mutableListOf<View>()
+    var onItemClick: (action: String) -> Unit = { }
+    private val Int.dp: Int get() = (this * Resources.getSystem().displayMetrics.density + 0.5f).toInt()
 
     private fun child() {
         for(v in children) {
@@ -36,10 +39,12 @@ class MyNavigationContainer(context: Context?, attrs: AttributeSet?) : LinearLay
             }
         }
     }
+
     private fun initAttrs(context: Context, attrs: AttributeSet) {
         orientation = HORIZONTAL
         gravity = Gravity.CENTER
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.MyNavigationContainer)
+        setPadding(0, 8.dp, 0, 4.dp)
 
         nvTextStyles = typedArray.getResourceId(R.styleable.MyNavigationContainer_nv_text_styles, 0)
         nvItemSelector = typedArray.getResourceId(R.styleable.MyNavigationContainer_nv_item_selector, 0)
@@ -50,6 +55,4 @@ class MyNavigationContainer(context: Context?, attrs: AttributeSet?) : LinearLay
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
         child()
     }
-
-    var onItemClick: (action: String) -> Unit = { }
 }

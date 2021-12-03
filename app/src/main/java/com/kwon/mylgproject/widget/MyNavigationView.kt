@@ -2,16 +2,17 @@ package com.kwon.mylgproject.widget
 
 import android.content.Context
 import android.content.res.ColorStateList
+import android.content.res.Resources
 import android.content.res.XmlResourceParser
 import android.graphics.Color
 import android.util.AttributeSet
 import android.view.Gravity
 import android.view.View
 import android.widget.Checkable
-import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.appcompat.widget.AppCompatImageButton
+import androidx.appcompat.widget.AppCompatImageView
+import androidx.appcompat.widget.AppCompatTextView
 import com.kwon.mylgproject.R
 
 class MyNavigationView(context: Context?, attrs: AttributeSet?) : LinearLayout(context, attrs), Checkable {
@@ -25,11 +26,12 @@ class MyNavigationView(context: Context?, attrs: AttributeSet?) : LinearLayout(c
     }
 
     lateinit var action: String
-    lateinit var imageView: ImageView
-    lateinit var textView:TextView
-    lateinit var defaultColor: String
-    lateinit var focusColor: String
-    lateinit var disableColor: String
+    lateinit var imageView: AppCompatImageView
+    lateinit var textView:AppCompatTextView
+    private lateinit var defaultColor: String
+    private lateinit var focusColor: String
+    private lateinit var disableColor: String
+    private val Int.dp: Int get() = (this * Resources.getSystem().displayMetrics.density + 0.5f).toInt()
 
     private fun initAttrs(context: Context, attrs: AttributeSet) {
         orientation = VERTICAL
@@ -39,8 +41,10 @@ class MyNavigationView(context: Context?, attrs: AttributeSet?) : LinearLayout(c
 
         action = typedArray.getString(R.styleable.MyNavigationView_nv_action)!!
 
-        val imageView = AppCompatImageButton(context)
-        imageView.layoutParams = LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT, 1F)
+        val imageView = AppCompatImageView(context)
+        val imageViewLayout = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT, 1f)
+        imageViewLayout.setMargins(0, 0, 0, 4.dp)
+        imageView.layoutParams = imageViewLayout
         imageView.adjustViewBounds = true
         imageView.setImageResource(typedArray.getResourceId(R.styleable.MyNavigationView_nv_image_src, 0))
         imageView.setBackgroundColor(Color.TRANSPARENT)
@@ -50,7 +54,7 @@ class MyNavigationView(context: Context?, attrs: AttributeSet?) : LinearLayout(c
         addView(imageView)
 
         val text = typedArray.getString(R.styleable.MyNavigationView_nv_text)
-        textView = TextView(context)
+        textView = AppCompatTextView(context)
         textView.layoutParams = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT)
         textView.textAlignment = TextView.TEXT_ALIGNMENT_CENTER
         textView.text = text

@@ -1,2 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="MyMaterialTheme" parent="Theme.MaterialComponents.NoActionBar">
+
+    </style>
 </resources>
